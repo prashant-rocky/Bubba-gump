@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+h1,
+h2 {
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 00;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h3 {
+    font-family: "Epunda Slab", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar {
+    background: #2a619b;
+    background: linear-gradient(90deg, rgba(42, 97, 155, 1) 0%, rgba(99, 174, 212, 1) 50%, rgba(42, 97, 155, 1) 100%);
+}
+.sign{
+    font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+}
+.mainColor {
+    color: #2a619b;
+}
+
+.tabs {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bolder;
+}
+
+.myBtn {
+    background: #2a619b;
+    background: linear-gradient(90deg, rgba(42, 97, 155, 1) 0%, rgba(99, 174, 212, 1) 50%, rgba(42, 97, 155, 1) 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.btnHover {
+    border: 1px solid #2a619b;
+    background: none;
+}
+
+.btnHover:hover {
+    background: #2a619b;
+    background: linear-gradient(90deg, rgba(42, 97, 155, 1) 0%, rgba(99, 174, 212, 1) 50%, rgba(42, 97, 155, 1) 100%) !important;
+    color: white !important;
+}
+
+.mainSlider {
+    padding-top: 200px;
+}
+
+footer a {
+    color: white;
+}
+
+.footer .social-media i {
+    margin-right: 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.mainSlider {
+    position: relative;
+    /* parent container */
+}
+
+.mainSlider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* semi-transparent black */
+    z-index: 1;
+    /* background overlay */
+    pointer-events: none;
+    /* allow clicks to pass through */
+}
+
+
+/* Text content on top */
+.mainSlider>.d-flex {
+    position: relative;
+    z-index: 2;
+    /* keep it above overlay */
+}
+
+/* Swiper */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide {
+    width: 80%;
+}
+
+.swiper-slide:nth-child(2n) {
+    width: 60%;
+}
+
+.swiper-slide:nth-child(3n) {
+    width: 40%;
+}
+
+#services {
+    background: linear-gradient(90deg,
+            rgba(42, 97, 155, 1) 0%,
+            rgba(99, 174, 212, 1) 50%,
+            rgba(42, 97, 155, 1) 100%);
+}
+
+/* Card basics */
+.service-card {
+    background: rgba(255, 255, 255, 0.03);
+    transition: transform .35s cubic-bezier(.2, .9, .3, 1), box-shadow .35s;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:focus,
+.service-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.35);
+    outline: none;
+}
+
+/* Media area */
+.card-media {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-media img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform .6s cubic-bezier(.2, .9, .3, 1);
+}
+
+.service-card:hover .card-media img,
+.service-card:focus .card-media img {
+    transform: scale(1.07);
+}
+
+/* Badge on image */
+.media-badge {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: black;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Card body */
+.card-body {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 40%);
+    color: black;
+    flex: 1 1 auto;
+}
+
+.card-body p {
+    color: black;
+}
+
+/* Button style override using bootstrap variables */
+.btn-outline-light {
+    color: black;
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+    color: #2a619b;
+    background: black;
+    border-color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .card-media {
+        height: 180px;
+    }
+
+    .display-6 {
+        font-size: 1.45rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .card-media {
+        height: 260px;
+    }
+}
+.blog-section {
+  color: black;
+}
+
+.blog-card img {
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+.blog-card {
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.mainBlog img{
+    height: 400px !important;
+}
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+.contact-section {
+    background: linear-gradient(135deg, #2a619b, #63aed4, #2a619b);
+    color: #333;
+  }
+
+  .contact-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  .btn-gradient {
+    background: linear-gradient(90deg, #2a619b, #63aed4, #2a619b);
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-gradient:hover {
+    opacity: 0.9;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+
+  .thankyou-card {
+    background: #e8f9f1;
+    border: 2px solid #28a745;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .book-table-section {
+  background: linear-gradient(90deg, #2a619b 0%, #63aed4 50%, #2a619b 100%);
+  color: #fff;
+}
+
+.booking-card {
+  border-radius: 20px;
+  background: #fff;
+}
+
+.booking-card h2 {
+  color: #2a619b;
+}
+
+.form-control {
+  border-radius: 12px;
+  padding: 12px 15px;
+}
+
+.btn-book {
+  background: #2a619b;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: 0.3s;
+  font-size: 1.1rem;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-book:hover {
+  background: #63aed4;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.thankyou-card {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
