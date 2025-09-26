@@ -10,7 +10,7 @@ window.addEventListener("load", function(){
       message: "This website uses cookies to ensure you get the best experience.",
       dismiss: "Got it!",
       link: "Learn more",
-      href: "https://bubba-gump.netlify.app/privacy-policy"
+      href: "https://bubba.cafe/cookies.html"
     }
   })
 });
