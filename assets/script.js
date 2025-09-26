@@ -1,19 +1,18 @@
 // / ---------------- Cookie Consent ----------------/
-window.addEventListener('load', function () {
-    if (window.cookieconsent) {
-        window.cookieconsent.run({
-            notice_banner_type: "simple",
-            consent_type: "express",
-            palette: "light",
-            language: "en",
-            page_load_consent_levels: ["strictly-necessary"],
-            notice_banner_reject_button_hide: false,
-            preferences_center_close_button_hide: false,
-            page_refresh_confirmation_buttons: false,
-            website_name: "bubba gump",
-            website_privacy_policy_url: "https://bubba-gump.netlify.app/" // replace with real URL
-        });
+window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    palette: {
+      popup: { background: "#000" },
+      button: { background: "#f1d600" }
+    },
+    theme: "classic",
+    content: {
+      message: "This website uses cookies to ensure you get the best experience.",
+      dismiss: "Got it!",
+      link: "Learn more",
+      href: "https://bubba-gump.netlify.app/privacy-policy"
     }
+  })
 });
 
 // Swiper
