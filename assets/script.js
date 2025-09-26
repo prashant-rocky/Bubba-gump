@@ -10,8 +10,8 @@ window.addEventListener('load', function () {
             notice_banner_reject_button_hide: false,
             preferences_center_close_button_hide: false,
             page_refresh_confirmation_buttons: false,
-            website_name: "Ichiran Ramen",
-            website_privacy_policy_url: "https://github.com/" // replace with real URL
+            website_name: "bubba gump",
+            website_privacy_policy_url: "https://bubba-gump.netlify.app/" // replace with real URL
         });
     }
 });
